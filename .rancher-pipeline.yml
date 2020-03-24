@@ -19,4 +19,9 @@ stages:
   steps:
   - applyYamlConfig:
       path: ./deployment.yaml
+- name: tset-stage
+  steps:
+  - runScriptConfig:
+      image: python:latest
+      shellScript: print("hello")
 notification: {}
